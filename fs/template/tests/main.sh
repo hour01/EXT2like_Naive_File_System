@@ -79,7 +79,7 @@ function core_tester() {
 }
 
 function clean_ddriver() {
-    ddriver -r
+    ddriver -r > /dev/null
 }
 
 function pass() {
