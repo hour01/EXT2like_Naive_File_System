@@ -79,8 +79,7 @@ function core_tester() {
 }
 
 function clean_ddriver() {
-    rm ~/ddriver -f
-    touch ~/ddriver
+    ddriver -r
 }
 
 function pass() {
