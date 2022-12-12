@@ -5,7 +5,7 @@ int main(int argc, char const *argv[])
 {
     int size;
     struct ddriver_state state;
-    int fd = ddriver_open("ddriver");
+    int fd = ddriver_open("/home/students/200110530/ddriver");
     if (fd < 0) {
         return -1;
     }
@@ -23,6 +23,8 @@ int main(int argc, char const *argv[])
 
     /* Cycle 2: ioctl test - return int */
     ddriver_ioctl(fd, IOC_REQ_DEVICE_SIZE, &size);
+    printf("%d\n", size);
+    ddriver_ioctl(fd, IOC_REQ_DEVICE_IO_SZ, &size);
     printf("%d\n", size);
 
     /* Cycle 3: ioctl test - return struct */

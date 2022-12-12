@@ -518,7 +518,8 @@ int main(int argc, char **argv)
     int ret;
 	struct fuse_args args = FUSE_ARGS_INIT(argc, argv);
 
-	sfs_options.device = strdup("/dev/ddriver");
+	// sfs_options.device = strdup("/dev/ddriver");
+	sfs_options.device = strdup("/home/students/200110530/ddriver");
 
 	if (fuse_opt_parse(&args, &sfs_options, option_spec, NULL) == -1)
 		return -SFS_ERROR_INVAL;
